@@ -3,8 +3,10 @@
 <html lang="en-US">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
 <meta content="Atul weds Sugandha: Wedding invitations." name="description">
+<meta name="theme-color" content="#fff5f0"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
 <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots">
 <link as="font" crossorigin="" href="assets/asset-45.woff2" rel="preload" type="font/woff2"/>
 <!-- Invitation page metadata -->
@@ -373,6 +375,7 @@ body.woocommerce-checkout .site-footer {
 </style>
 <style id="ios-scroll-and-audio-fixes">
 .im-wording__frame { display: none; }
+html, body { background-color: #fff5f0; }
 @supports (-webkit-touch-callout: none) {
   .im-wording--framed .im-wording__wrap {
     aspect-ratio: 560 / 995.008;
@@ -397,6 +400,11 @@ body.woocommerce-checkout .site-footer {
     width: 100%;
     height: auto;
     max-width: none;
+  }
+  .im-wording--framed .im-wording__request {
+    width: 72%;
+    max-width: none;
+    box-sizing: border-box;
   }
   .im-wording--framed .im-wording__inner {
     position: absolute;
