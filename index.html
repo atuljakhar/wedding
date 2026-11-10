@@ -372,20 +372,35 @@ body.woocommerce-checkout .site-footer {
 @media(max-width:640px){.im-find-us{padding:56px 16px 68px}.im-find-us__heading{margin-bottom:38px}.im-find-us__eyebrow{font-size:46px}.im-find-us__title{font-size:38px}.im-find-us__rule{margin-top:28px}.im-find-us__card{border-radius:30px;margin-bottom:46px;padding:30px 22px}.im-find-us__card-title{font-size:34px;margin-bottom:26px}.im-find-us__details p{font-size:16px;gap:14px}.im-find-us__details svg{height:22px;width:22px}.im-find-us__button{font-size:13px;letter-spacing:.12em;min-height:62px;padding:12px}.im-find-us__map{border-radius:28px;height:420px}}
 </style>
 <style id="ios-scroll-and-audio-fixes">
+.im-wording__frame { display: none; }
 @supports (-webkit-touch-callout: none) {
+  .im-wording--framed .im-wording__wrap {
+    aspect-ratio: 560 / 995.008;
+  }
   .im-wording--framed .im-wording__paper {
-    position: relative;
+    position: absolute;
+    inset: 0 0 auto;
     width: 100%;
     height: 177.68cqw;
-    border: 0;
-    border-image: none;
-    background: var(--im-scroll-frame) center / 100% 100% no-repeat;
-    box-sizing: border-box;
     overflow: hidden;
-    transform-origin: top center;
+    border: 0;
+    border-image: none !important;
+    background: none;
+    box-sizing: border-box;
+    clip-path: none !important;
+  }
+  .im-wording__frame {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    max-width: none;
   }
   .im-wording--framed .im-wording__inner {
     position: absolute;
+    z-index: 1;
     top: 23.0984cqw;
     left: 0;
     right: 0;
@@ -394,19 +409,23 @@ body.woocommerce-checkout .site-footer {
     padding: 0 2cqw 2cqw;
   }
   .im-wording__wrap.is-armed .im-wording__paper {
-    clip-path: none !important;
-    transform: scaleY(.14);
+    height: 22cqw;
+    transition: none;
   }
+  .im-wording__wrap.is-armed .im-wording__inner { opacity: 0; }
   .im-wording__wrap.is-armed.is-open .im-wording__paper {
-    clip-path: none !important;
-    transform: scaleY(1);
-    transition: transform var(--im-scroll-duration) var(--im-scroll-ease);
+    height: 177.68cqw;
+    transition: height var(--im-scroll-duration) var(--im-scroll-ease);
+  }
+  .im-wording__wrap.is-armed.is-open .im-wording__inner {
+    opacity: 1;
+    transition: opacity .9s ease .6s;
   }
   .im-wording__wrap.is-settled .im-wording__paper {
-    clip-path: none !important;
-    transform: none !important;
+    height: 177.68cqw !important;
     transition: none !important;
   }
+  .im-wording__wrap.is-settled .im-wording__inner { opacity: 1 !important; }
   .im-wording--framed .im-wording__roller { display: none !important; }
 }
 </style>
@@ -454,6 +473,7 @@ body.woocommerce-checkout .site-footer {
 <div class="im-wording__scroll">
 <div class="im-wording__wrap" data-animate="unroll">
 <div class="im-wording__paper">
+<img class="im-wording__frame" src="assets/asset-90.webp" alt="" decoding="async" fetchpriority="high"/>
 <div class="im-wording__inner">
 <img alt="" class="im-wording__icon" decoding="async" loading="lazy" src="assets/asset-78.png" style="width:90px" width="90"/>
 <p class="im-wording__shloka" style="font-size:16px;font-family:inherit;font-weight:500;color:#b4673f">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ,<br/>
