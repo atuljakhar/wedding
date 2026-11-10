@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+  <defs>
+    <g id="m" fill="#C9A24B" stroke="#C9A24B" stroke-width="0.9">
+      <ellipse cx="0" cy="-17" rx="5" ry="14"></ellipse>
+      <ellipse cx="0" cy="17" rx="5" ry="14"></ellipse>
+      <ellipse cx="-17" cy="0" rx="14" ry="5"></ellipse>
+      <ellipse cx="17" cy="0" rx="14" ry="5"></ellipse>
+      <g transform="rotate(45)">
+        <ellipse cx="0" cy="-12" rx="3" ry="9"></ellipse>
+        <ellipse cx="0" cy="12" rx="3" ry="9"></ellipse>
+        <ellipse cx="-12" cy="0" rx="9" ry="3"></ellipse>
+        <ellipse cx="12" cy="0" rx="9" ry="3"></ellipse>
+      </g>
+      <circle r="5"></circle>
+      <circle cx="0" cy="-30" r="2"></circle>
+      <circle cx="0" cy="30" r="2"></circle>
+      <circle cx="-30" cy="0" r="2"></circle>
+      <circle cx="30" cy="0" r="2"></circle>
+    </g>
+    <g id="d" fill="#C9A24B">
+      <path d="M0 -6 L4 0 L0 6 L-4 0 Z"></path>
+      <circle r="1.2"></circle>
+    </g>
+  </defs>
+  <g opacity="0.13">
+    <use href="#m" x="90" y="90"></use>
+    <use href="#m" x="0" y="0"></use>
+    <use href="#m" x="180" y="0"></use>
+    <use href="#m" x="0" y="180"></use>
+    <use href="#m" x="180" y="180"></use>
+    <use href="#m" x="90" y="0"></use>
+    <use href="#m" x="0" y="90"></use>
+    <use href="#m" x="180" y="90"></use>
+    <use href="#m" x="90" y="180"></use>
+    <use href="#d" x="45" y="45"></use>
+    <use href="#d" x="135" y="45"></use>
+    <use href="#d" x="45" y="135"></use>
+    <use href="#d" x="135" y="135"></use>
+  </g>
+</svg>

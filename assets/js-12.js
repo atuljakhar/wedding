@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelector(".im-cursor-glow");e&&!window.matchMedia("(pointer: coarse)").matches&&window.addEventListener("pointermove",t=>{e.style.left=`${t.clientX}px`,e.style.top=`${t.clientY}px`,e.classList.add("is-visible")})});
